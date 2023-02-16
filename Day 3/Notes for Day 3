@@ -1,0 +1,138 @@
+>>>>>>>>>>>>>Strings
+
+Ways of Strings
+
+s="welcome"
+s='welcome'
+s='''welcome'''
+s=str("welcome")
+s=str('welcome')
+
+Create an empty string
+Name = ""
+Name = ''
+Name = str()
+
+Mutable - Variable value cannot be changed.
+Immutable - Variable value can be changed.
+
+Strings are Immutable _ Refer below example
+str1 = 'hello'
+print(str1) #hello
+print(id(str1)) #640329169712
+
+str2 = str1 + 'world'
+print(str1) #hello
+print(str2) #helloworld
+print(id(str2)) #640329216560
+
+with above example we see that id value is changed after updation, so string is immutable
+
+Lets take example of int
+num1 = 10
+print(num1)
+print(id(num1))
+
+num2 = num1 + 20
+print(num2)
+print(id(num2))
+
+### Example of string with + and *
+str = 'Welcome'
+print(str+' to India') # Welcome to India is o/p #Concatenation
+
+str = 'Hello'
+print(str * 2) #Hello Hello is o/p # Mutliple
+
+## Example of slicing string
+str = 'Welcome'
+print(str[0:3]) #Wel is o/p
+print(str[2:])  #lcome
+print(str[:6]) #Welcom
+print(str[1:-2]) #elco
+
+## Example of ord() gives ASCI and chr() gives char represented by the ASCI number
+print(ord('B')) #66
+print(chr(121)) #Y
+
+## Example of min() max() len()
+print(max('abcdebbcc')) #e
+print(min('bagshe')) #a
+print(len('welcome')) #7
+
+## Example for - in, not in operators
+s = 'welcome'
+print('come' in s) #True
+print('cmeo' in s) #False
+
+print('come' not in s) #False
+print('cmeo' not in s) #True
+
+## Example String comparison
+print('Anu'>'Anoo') # True
+print('Teeth'<='Tee') #False
+print('yellow'>='fellow') #True
+
+# Example testing strings
+s = 'welcome to python'
+print(s.isalnum()) #False
+print(s.isalpha()) #True
+print(s.isidentifier()) #False
+print(' '.isspace()) #True
+print(s.isdigit()) #False
+print(s.isupper()) #False
+
+Example  searching for substrings
+s = 'welcome to python'
+print(s.startswith('to'))   #false
+print(s.endswith('on'))     #True
+print(s.find('to'))     #8
+print(s.find('ton'))    #-1
+print(s.count('o'))     #3
+
+Example Converting of strings
+s = 'This is PYTHON program'
+s1 = s.capitalize()
+print(s1)   # This is python program
+
+s2 = s.title()
+print(s2)   # This Is Python Program
+
+s3 = s.upper()
+print(s3)   # THIS IS PYTHON PROGRAM
+
+s4 = s.lower()
+print(s4)   # this is python program
+
+s6 = s.swapcase()
+print(s6)   # tHIS IS python PROGRAM
+
+s7 = s.replace("program", "language")
+print(s7)   # This is PYTHON language
+
+##### Very Imp Interview Qn, Reverse a String
+
+Method 1
+s = 'welcome'
+rev_s = ""
+for i in s:
+    rev_s=i+rev_s
+print("Reversed String is",rev_s)   #Reversed String is emoclew
+
+Method 2
+s = 'welcome'
+print(s[::-1]) #emoclew #using slicing method
+
+
+
+
+
+
+
+
+
+
+
+
+
+

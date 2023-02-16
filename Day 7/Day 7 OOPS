@@ -1,0 +1,46 @@
+PYTHON - Structured + Object oriented
+
+OOPS - object oriented programming language
+Class
+Object
+Inheritance
+Polymorphism
+
+Class - *Logical entity *Doesnt require any memory *Blue print
+Class is a collection of variables (attributes) and methods (behavior)
+EX: Animal, Employee
+
+Object - Physical entity EX: Dog, cat, Ravi, Anil.
+Its instance of the class and it will occupy some space in the memory.
+
+For one class we can create many methods.
+Objects are independent.
+
+FUNCTIONS AND METHODS
+
+Functions can be craeted with out a class.
+Methods has to be created within the class.
+
+*** There are two type of methods we can define within the class.
+1. Instance methods: We can call only through object.
+2. Static methods: We can directly called within the class.
+
+*** CLASS Variables - inside a class
+
+**METHODS:
+1. Give any value.
+2. Return any value.
+3. Method can take any arguments/parameters.
+4. We have to invoke the method using an object.
+ 
+**CONSTRUCTORS: __init__(self):
+1. Constructor name is fixed in python.
+2. It will not return any value.
+3. It can take any arguments/paramters.
+4. Constructor will be called the time of the object creation itself.
+
+
+
+
+
+

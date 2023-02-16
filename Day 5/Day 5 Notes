@@ -1,0 +1,177 @@
+Set { }:
+It is a collection which is unordered and unindexed.
+They are written in curly brackets.
+
+Dictionary {key,value}:
+It is a collection which is unordered and changeable(Mutable) and indexed.
+They are written in curly brackets,  but they will have key and value.
+EX; book1: 100 | book2: 200 | book3: 300
+
+List            Tuple             Set           Dictionary
+Mutable         Immutable       Mutable          Mutable
+Indexed         Indexed         Unindexed        Unindexed
+Ordered         Ordered         Unordered        Unordered
+
+>>>>>>>>>>>>>>>>>>>Practice of Sets:
+
+EX 1: Creating the set
+myset = {'ganga','kaveri','yamuna'}
+print(myset)    #{'yamuna', 'ganga', 'kaveri'}
+
+EX 2: Access all itesm from set
+myset = {'aa','bb','cc,'}
+for i in myset:
+    print(i)
+
+EX 3: Value exists in set or not
+myset = {'app','ball','cat'}
+print('app' in myset)   #True
+print('bal' in myset)   #False
+
+EX 4: adding items in set - add()-for single item or update() for multiple item
+
+using add()
+myset = {'app','ball','cat'}
+myset.add('dog')
+print(myset)    #{'ball', 'app', 'dog', 'cat'}
+
+using update()
+myset = {'app','ball','cat'}
+myset.update(['pig','deer'])
+print(myset)    #{'deer', 'ball', 'cat', 'pig', 'app'}
+
+
+EX 5: Find number of items in a set
+myset = {'app','ball','cat'}
+print(len(myset))   #3
+
+EX 6: Remove item from the set
+Method 1 using remove()
+myset = {'app','ball','cat'}
+myset.remove('cat')
+print(myset)    #{'ball', 'app'}
+myset.remove('abc')     #KeyError: 'abc'
+
+Method 2 using discard()
+myset = {'app','ball','cat'}
+myset.discard('cat')
+print(myset)    #{'ball', 'app'}
+myset.discard('abc')  #Doesnt give any error
+
+EX 7: Remove all elements from set
+Using clear()
+myset = {'app','ball','cat'}
+myset.clear()
+print(myset) #set()
+
+Using del()
+myset = {'app','ball','cat'}
+del myset
+print(myset) #set()
+
+EX 7: Joining two set using union() or update()
+using union()
+s1 = {'abc','xyz'}
+s2 = {1,2}
+s3 = s2.union(s1)
+print(s3)   #{1, 2, 'xyz', 'abc'}
+
+using update()
+s1 = {'abc','xyz'}
+s2 = {1,2}
+s2.update(s1)
+print(s2)   #{1, 2, 'xyz', 'abc'}
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>Practice of Dictionary:
+
+ex1; Creating a dictonary
+mydi = {100:'x',200:'y',300:'z'}
+print(mydi) #{100: 'x', 200: 'y', 300: 'z'}
+
+
+ex2; Access items from dictionary
+Normal way
+mydi =  {
+    "Model":"i10",
+    "Engine":"BS6",
+    "Brand":"Hyundai"
+}
+# print(mydi["Model"])    #i10
+# print(mydi["BS6"])      #KeyError: 'BS6'
+# get() method
+print(mydi.get("Brand"))    #Hyundai
+
+ex3: Change values from the dictionary
+mydi =  {"Model":"i10","Engine":"BS6","year":2020}
+print(mydi)     #{'Model': 'i10', 'Engine': 'BS6', 'year': 2020}
+mydi["year"]=2023
+print(mydi)     #{'Model': 'i10', 'Engine': 'BS6', 'year': 2023}
+
+ex4: Reading values from the dictionary
+mydi =  {"Model":"i10","Engine":"BS6","year":2020}
+for i in mydi:
+    print(i)  # Returns only key
+for i in mydi:
+    print(mydi[i])    # Returns only values
+
+### output
+Model
+Engine
+year
+i10
+BS6
+2020
+
+ex5: Read both key and value
+mydi =  {"Model":"i10","Engine":"BS6","year":2020}
+for x,y in mydi.items():
+    print(x,y)
+
+# output
+Model i10
+Engine BS6
+year 2020
+
+ex 6: Check if the is available or not
+mydi ={"Model":"i10","Engine":"BS6","year":2020}
+print('Model' in mydi)  #True
+#### or
+if 'Engine' in mydi:
+    print('yes present')    #yes present
+else:
+    print('not found')
+
+ex 7: Find the number of items in the dictionary
+mydi ={"Model":"i10","Engine":"BS6","year":2020}
+print(len(mydi))        #3
+
+ex8: Change values from the dictionary
+mydi =  {"Model":"i10","Engine":"BS6","year":2020}
+print(mydi)     #{'Model': 'i10', 'Engine': 'BS6', 'year': 2020}
+mydi["state"]="KA"
+print(mydi)   #{'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+
+ex9: Deleting the values from the dictionary
+mydi = {'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+mydi.pop('Model')
+del mydi['year']
+print(mydi)     #{'Engine': 'BS6', 'state': 'KA'}
+mydi.clear()    #This will clear the values but empty dictionary will be present
+print(mydi)     #{}
+del mydi        # will delete the complete dictionary and give NameError
+print(mydi)     #NameError: name 'mydi' is not defined
+
+ex10: Copying dictionary
+Method 1:
+mydi1 = {'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+mydi2 = mydi1
+print(mydi2)    #{'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+
+Method 2 : copy()
+mydi1 = {'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+mydi2 = mydi1.copy()
+print(mydi2)    #{'Model': 'i10', 'Engine': 'BS6', 'year': 2020, 'state': 'KA'}
+

@@ -1,0 +1,40 @@
+Modules and Packages
+
+Modules: Collections of classes(variables+methods) , functions.
+1. How to create a module - ex: calculator
+2. how to call from one module to another. - Ex: calling calculator from operations
+
+Ex with functions and classes
+functions: EX: animal , bird and animalandbird files
+classes: EX: a, b, ab files
+
+two approach:
+1. import from module name
+2. from modulename import functions and classes
+
+Pacakages: Collection of modules
+
+EX 1
+*pack1 =====> module 1 -----> display()  <<<<<<<<< client need access
+       =====> module 2 -----> show()
+
+EX 2
+*package 1 ======> module 1 -------> display()  <<<<<<<<< customer need access
+*package 1 ====> pack 2 ======> module 2 ------> show()
+
+EX 3
+*pack A ===> emp module ===> employee class ---> dispemp() method
+*pack B ===> stu module ======> student class ---> dispstu() method
+*pack C ===> principal
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,218 @@
+Day 4 : Collections
+i = 10
+s = 'String'
+d = 10.5
+
+List [ ] - Mutable
+Tuple ( ) - Immutable
+Set { } - Mutable
+Dictionary {key, value} - Mutable
+
+List : A list is a collection which is ordered and changeable.
+List is Mutable. In python lists are written in square brackets [].
+
+Tuple : A Tuple is a collection which is ordered and unchangeable.
+Tuple is Immutable. In python Tuples are written in round brackets ().
+
+NOTE: In case of Immutable, below things are not possible
+1. Cannot modify existing value.
+2. Cannot append new value.
+3. Cannot insert new value.
+4. Cannot remove a value.
+
+>>>>>>>>>>>>>>> Practice of List
+
+Example - How to create the list
+
+mylist1 = [10,20,30,40,50]
+mylist2 = ["java","python","ruby","C","php"]
+mylist3 = ["mohan",20,"babu",40]
+mylist4 = list()
+
+print(mylist1)  #[10, 20, 30, 40, 50]
+print(mylist2)  #['java', 'python', 'ruby', 'C', 'php']
+print(mylist3)  #['mohan', 20, 'babu', 40]
+print(mylist4)  #[]
+
+Accessing individual items from the list
+l = ["apple","cherry", "banana"]
+print(l[-1])  #banana
+print(l[0])   #apple
+
+Access using range of index
+l = ["apple","cherry", "banana", "berry", "grapes"]
+print(l[2:4]) #['banana', 'berry']
+
+Change the value from the list
+fruit = ['apple','banana','cherry']
+fruit[0]='guava'
+print(fruit)    #['guava', 'banana', 'cherry']
+
+Read the list items using for loop
+fruit = ['apple','banana','cherry']
+for i in fruit:
+    print(i)
+
+Check if item exists in the list or not
+fruit = ['apple','banana','cherry']
+if 'apple' in fruit:
+    print("Yes... found!!!")
+else:
+    print("No... Not found!!!")
+
+List length
+fruit = ['apple','banana','cherry']
+print(len(fruit)) #3
+
+Add new item in the list
+fruit = ['apple','banana','cherry']
+fruit.append('orange')
+print(fruit) #['apple', 'banana', 'cherry', 'orange']
+
+Add in between the list
+fruit = ['apple','banana','cherry']
+fruit.insert(2,'berry')
+print(fruit)    #['apple', 'banana', 'berry', 'cherry']
+
+Remove item from the list
+
+Method 1 - pop
+fruit = ['apple', 'banana', 'berry', 'cherry']
+fruit.pop(3)
+print(fruit)       #['apple', 'banana', 'berry']
+
+Method 2 - del
+fruit = ['apple', 'banana', 'berry', 'cherry']
+del fruit[1]
+print(fruit)    #['apple', 'berry', 'cherry']
+
+Method 3 - clear It removes all items from the list
+fruit = ['apple', 'banana', 'berry', 'cherry']
+fruit.clear()
+print(fruit)    #[]
+
+Copy from one list to another
+
+Method 1
+fruit = ['apple', 'banana', 'berry', 'cherry']
+new = list(fruit)
+print(new)      #['apple', 'banana', 'berry', 'cherry']
+
+Method 2
+fruit = ['apple', 'banana', 'berry', 'cherry']
+new = fruit.copy()
+print(new)      #['apple', 'banana', 'berry', 'cherry']
+
+Combine or Join the lists
+Method 1 - Using Concetation
+lista = ["abc","pqr","xyz"]
+listb = [1,2,3]
+listc = lista+listb
+print(listc)    #['abc', 'pqr', 'xyz', 1, 2, 3]
+
+Method 2 - Using looping statements
+lista = ["abc","pqr","xyz"]
+listb = [1,2,3]
+for i in listb:
+    lista.append(i)
+print(lista)    #['abc', 'pqr', 'xyz', 1, 2, 3]
+
+Method 3 - Using extend
+lista = ["abc","pqr","xyz"]
+listb = [1,2,3]
+lista.extend(listb)
+print(lista)    #['abc', 'pqr', 'xyz', 1, 2, 3]
+
+# Find equality of list
+m1 = [1,2,3]
+m2 = [1,2,3]
+if m1 == m2:
+    print('list are equal')     #list are equal
+else:
+    print('list not equal')
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>Practice of Tuple
+
+EX 1 Creating of Tuple
+mytuple=("pig","ox","cow","deer","dog","cat")
+print(mytuple)      #('pig', 'ox', 'cow', 'deer', 'dog', 'cat')
+
+EX 2 Access the Tuple items
+mytuple=("pig","ox","cow","deer","dog","cat")
+print(mytuple[0])   #pig
+print(mytuple[1])   #ox
+
+EX 3 Access all tuple items
+mytuple=("pig","ox","cow","deer","dog","cat")
+for i in mytuple:
+    print(i)
+
+EX 4 Access tuple using range indexes
+mytuple=("pig","ox","cow","deer","dog","cat")
+print(mytuple[-4:-2])   #('cow', 'deer')
+
+EX 5: Change the tuple values
+But directly we cannot modify the values in the tuple since it is immutable
+But there is a work round -->tuple()-->list(modify)-->tuple()
+
+mytuple=("pig","ox","cow","deer","dog","cat")
+mylist = list(mytuple)
+print(mylist)   #['pig', 'ox', 'cow', 'deer', 'dog', 'cat']
+mylist[0] = "lion"
+mylist[5] = "tiger"
+mytuple=tuple(mylist)
+print(mytuple)  #('lion', 'ox', 'cow', 'deer', 'dog', 'tiger')
+
+
+EX 6: Search for an item in  the list
+mytuple = ("pig", "ox", "cow", "deer", "dog", "cat")
+if "pig" in mytuple:
+    print("YES")    #YES
+else:
+    print("NO")
+
+EX 7: Tuple length
+mytuple = ("pig", "ox", "cow", "deer", "dog", "cat")
+print(len(mytuple)) #6
+
+EX 8: Add items into the tuple
+mytuple = ("pig", "ox", "cow", "deer", "dog", "cat")
+mytuple[0] = "lion"     #TypeError: 'tuple' object does not support item assignment
+print(mytuple)
+
+EX 9: Copying of tuple
+mytuple1 = ("pig", "ox", "cow", "deer", "dog", "cat")
+mytuple2=mytuple1
+print(mytuple2) #('pig', 'ox', 'cow', 'deer', 'dog', 'cat')
+
+EX 10: Removing of the tuple - not possible due to immutable
+mytuple = ("pig", "ox", "cow", "deer", "dog", "cat")
+mytuple.remove("pig")   #Invalid - AttributeError: 'tuple' object has no attribute 'remove'
+del mytuple
+print(mytuple)  #NameError: name 'mytuple' is not defined. Did you mean: 'tuple'?
+
+EX 11: Join or Combine tuple
+tuple1 = (1,2,3)
+tuple2 = ("a","b","c")
+tuple3 = tuple1+tuple2
+print(tuple3)       #(1, 2, 3, 'a', 'b', 'c')
+
+# EX 12: Compare tuple equality
+m1 = (1,2,3)
+m2 = (1,2,3)
+if m1 == m2:
+    print('tuple are equal')     #list are equal
+else:
+    print('tuple not equal')
+
+# EX 13:
